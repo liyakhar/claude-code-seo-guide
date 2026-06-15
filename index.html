@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code SEO Masterclass — Action Guide</title>
+<meta name="description" content="Condensed action guide to Jono Catliff's Claude Code SEO workflow: SEMrush research, blog prompts, on-page checklist, technical SEO, and Vercel deploy.">
+<link rel="canonical" href="__SITE_URL__/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claude Code SEO Masterclass — Action Guide">
+<meta property="og:description" content="Every technical step, filter, and prompt from the 50k-clicks SEO masterclass — condensed and linked to the official blueprint files.">
+<meta property="og:url" content="__SITE_URL__/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Claude Code SEO Masterclass — Action Guide">
+<meta name="twitter:description" content="Condensed SEO action guide with blueprint file links.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F3EE;--surface:#FFFCF8;--surface-2:#F9F7F2;--text:#1A1915;--text-muted:#6B665C;--accent:#D97757;--accent-soft:#F3E8E2;--border:#E8E4DC;--link:#8B5E3C;--doc-link:#5C4A32;--radius:12px;--shadow:0 1px 2px rgba(26,25,21,.04),0 8px 24px rgba(26,25,21,.06)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:15px;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:280px 1fr;min-height:100vh;max-width:1280px;margin:0 auto}
+aside{position:sticky;top:0;height:100vh;overflow-y:auto;padding:2rem 1.25rem 2rem 1.5rem;border-right:1px solid var(--border);background:var(--surface)}
+aside h3{font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;color:var(--text-muted)}
+.toc{list-style:none}.toc li{margin-bottom:.55rem;font-size:.82rem;line-height:1.4}
+.toc a{color:var(--text);text-decoration:none}.toc a:hover{color:var(--accent)}
+.toc-time{color:var(--text-muted);font-size:.75rem}.toc-time a{color:var(--text-muted)}
+.resources{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.resources ul{list-style:none}.resources li{margin-bottom:.4rem;font-size:.8rem}
+.resources a{color:var(--link);text-decoration:none}.resources a:hover{text-decoration:underline}
+main{padding:2.5rem 3rem 4rem;max-width:760px}
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+h1{font-family:'Instrument Serif',Georgia,serif;font-size:2.6rem;font-weight:400;line-height:1.15;letter-spacing:-.02em;margin-bottom:.75rem}
+.subtitle{color:var(--text-muted);font-size:1rem;margin-bottom:2rem;max-width:58ch}
+.meta-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.pill{display:inline-flex;padding:.35rem .75rem;background:var(--surface-2);border:1px solid var(--border);border-radius:999px;font-size:.78rem;color:var(--text-muted);text-decoration:none}
+.pill:hover{border-color:var(--accent);color:var(--accent)}.pill.primary{background:var(--accent-soft);border-color:transparent;color:var(--doc-link)}
+.notice{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem;margin-bottom:2.5rem;font-size:.88rem;color:var(--text-muted);box-shadow:var(--shadow)}
+.notice strong{color:var(--text)}.notice a{color:var(--link)}
+h2.chapter{font-family:'Instrument Serif',Georgia,serif;font-size:1.55rem;font-weight:400;margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border);scroll-margin-top:1.5rem}
+h2.chapter:first-of-type{border-top:none;margin-top:0;padding-top:0}
+.section-body{margin-bottom:1.5rem;color:var(--text)}
+.section-body ul,.section-body ol{margin:.5rem 0 .75rem 1.25rem}
+.section-body li{margin-bottom:.35rem}
+.section-body p{margin-bottom:.75rem}
+.section-body pre{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:.85rem 1rem;font-size:.82rem;overflow-x:auto;margin:.75rem 0}
+.section-body code{font-size:.88em;background:var(--surface-2);padding:.1rem .35rem;border-radius:4px}
+.section-body table{width:100%;border-collapse:collapse;margin:.75rem 0;font-size:.88rem}
+.section-body th,.section-body td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left}
+.section-body th{background:var(--surface-2);font-weight:600}
+a.doc-link{color:var(--doc-link);background:var(--accent-soft);padding:.05rem .35rem;border-radius:4px;text-decoration:none;font-weight:500;font-size:.92em;border-bottom:1px solid rgba(139,94,60,.25)}
+a.doc-link:hover{background:#EBDDD4}
+a.ext-link{color:var(--link);text-decoration:underline;text-underline-offset:2px}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.8rem;color:var(--text-muted)}
+@media(max-width:900px){.layout{grid-template-columns:1fr}aside{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--border)}main{padding:1.5rem}h1{font-size:2rem}}
+</style></head><body><div class="layout"><aside><h3>Sections</h3><ol class="toc"><li><a href="#ch-0">Overview &amp; Strategy</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=0" target="_blank" rel="noopener">00:00</a></span></li>
+<li><a href="#ch-227">Setup: VS Code + Claude Code</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=227" target="_blank" rel="noopener">03:47</a></span></li>
+<li><a href="#ch-260">Build the Website (v1)</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=260" target="_blank" rel="noopener">04:20</a></span></li>
+<li><a href="#ch-486">Static Site Generation (Required)</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=486" target="_blank" rel="noopener">08:06</a></span></li>
+<li><a href="#ch-606">Keyword Research — SEMrush (Blog Keywords)</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=606" target="_blank" rel="noopener">10:06</a></span></li>
+<li><a href="#ch-1080">Create Blog Post (v2) + Pexels Images</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=1080" target="_blank" rel="noopener">18:00</a></span></li>
+<li><a href="#ch-1338">Fix AI Slop — Voice Files (v3 prep)</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=1338" target="_blank" rel="noopener">22:18</a></span></li>
+<li><a href="#ch-1577">Rewrite Blog Post — SERP Analysis (v3)</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=1577" target="_blank" rel="noopener">26:17</a></span></li>
+<li><a href="#ch-1732">SEO Black Box — How to Win</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=1732" target="_blank" rel="noopener">28:52</a></span></li>
+<li><a href="#ch-1874">Service Pages — Zipper Model</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=1874" target="_blank" rel="noopener">31:14</a></span></li>
+<li><a href="#ch-2419">On-Page SEO (v5) — 80+ Signals</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=2419" target="_blank" rel="noopener">40:19</a></span></li>
+<li><a href="#ch-2752">Technical SEO (v6) — Lighthouse 100/100</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=2752" target="_blank" rel="noopener">45:52</a></span></li>
+<li><a href="#ch-3062">Automate with Claude Code Skills</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=3062" target="_blank" rel="noopener">51:02</a></span></li>
+<li><a href="#ch-3276">Off-Page SEO — What to Avoid &amp; 4 Legit Methods</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=3276" target="_blank" rel="noopener">54:36</a></span></li>
+<li><a href="#ch-3671">Deploy: GitHub + Vercel</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=3671" target="_blank" rel="noopener">61:11</a></span></li>
+<li><a href="#ch-3804">Post-Launch: Google Business + Search Console</a> <span class="toc-time"><a href="https://youtu.be/4IyJm1i__ag?t=3804" target="_blank" rel="noopener">63:24</a></span></li></ol>
+<div class="resources"><h3>Blueprint Files</h3><ul>
+<li><a href="CLAUDE.md">CLAUDE.md</a></li><li><a href="on-page-seo.md">on-page-seo.md</a></li>
+<li><a href="prompts.md">prompts.md</a></li><li><a href="references/humour.md">humour.md</a></li>
+<li><a href="keywords.csv">keywords.csv</a></li><li><a href="Service-keywords.csv">Service-keywords.csv</a></li>
+<li><a href=".claude/skills/blog/SKILL.md">blog skill</a></li><li><a href="slideshow/index.html">slideshow</a></li>
+<li><a href="transcript-full.html">Full raw transcript</a></li>
+</ul></div></aside><main>
+<p class="eyebrow">Jono Catliff · Automatable</p>
+<h1>Claude Code SEO Masterclass</h1>
+<p class="subtitle">Condensed action guide — every technical step, click path, filter, and prompt. Fluff, anecdotes, and sales pitches removed.</p>
+<div class="meta-bar">
+<a class="pill primary" href="https://youtu.be/4IyJm1i__ag" target="_blank" rel="noopener">Watch on YouTube</a>
+<a class="pill" href="prompts.md">Prompts</a><a class="pill" href="on-page-seo.md">SEO Checklist</a>
+<a class="pill" href="transcript-full.html">Full transcript</a><span class="pill">16 sections</span></div>
+<div class="notice"><strong>Condensed from ~12,800 words → ~2,400 words.</strong> Keeps all actionable SEO steps, SEMrush clicks, Lighthouse workflow, deployment, and prompt references. Links point to official blueprint files.</div>
+<h2 class="chapter" id="ch-0">Overview &amp; Strategy</h2>
+<div class="section-body"><ul>
+<li><strong>Goal:</strong> Rank on Google via two tactics — <em>blog posts at scale</em> (informational keywords) + <em><a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">service pages</a></em> (money keywords: service × city).</li>
+<li><strong>Click distribution:</strong> ~40% of clicks go to position 1, ~20% to position 2, then drops fast. Higher rank = more leads.</li>
+<li><strong>Four pillars:</strong> (1) winning keywords, (2) <a class="doc-link" href="on-page-seo.md" title="On-page SEO">on-page SEO</a>, (3) <a class="doc-link" href="slideshow/technical-seo.html" title="Technical SEO">technical SEO</a>, (4) <a class="doc-link" href="slideshow/off-page-seo.html" title="Off-page SEO">off-page SEO</a>.</li>
+<li><strong><a class="doc-link" href="on-page-seo.md" title="On-page SEO">on-page SEO</a></strong> = content, structure, meta tags. <strong><a class="doc-link" href="slideshow/technical-seo.html" title="Technical SEO">technical SEO</a></strong> = site build, speed, crawlability, sitemap, <a class="doc-link" href="app/robots.ts" title="Robots">robots.txt</a>.</li>
+<li><strong>AI SEO = regular SEO.</strong> ChatGPT/Perplexity/Claude search Google first — rank on Google and you rank in AI answers.</li>
+<li><strong>Wrong strategy risk:</strong> You may not know for 2–4 years. Use data (<a class="ext-link" href="https://semrush.sjv.io/c/3446994/3367878/13053" title="SEMrush" target="_blank" rel="noopener">SEMrush</a>), not Claude guesses, for keywords.</li>
+</ul></div>
+<h2 class="chapter" id="ch-227">Setup: VS Code + Claude Code</h2>
+<div class="section-body"><ol>
+<li>Install <strong><a class="ext-link" href="https://code.visualstudio.com/" title="VS Code" target="_blank" rel="noopener">VS Code</a></strong> (Antigravity no longer supports Claude Code extension — use <a class="ext-link" href="https://code.visualstudio.com/" title="VS Code" target="_blank" rel="noopener">VS Code</a> instead).</li>
+<li>Install the <strong>Claude Code</strong> extension in <a class="ext-link" href="https://code.visualstudio.com/" title="VS Code" target="_blank" rel="noopener">VS Code</a>.</li>
+<li>Create a project folder (e.g. <code>SEO_brief</code>). Every Claude Code project lives in one folder.</li>
+<li>Add <strong><a class="doc-link" href="CLAUDE.md" title="Official CLAUDE.md">CLAUDE.md</a></strong> to the folder root — this is Claude's instruction manual (<a class="doc-link" href="slideshow/rendering-pizza.html" title="SSG">SSG</a> rules, voice rules, SEO requirements). Copy from the Skool blueprint or clone the <a class="ext-link" href="https://github.com/jonocatliff/SEO_brief" title="GitHub" target="_blank" rel="noopener">GitHub</a> repo.</li>
+<li>Clone official repo: <code>git clone https://<a class="ext-link" href="https://github.com/jonocatliff/SEO_brief" title="GitHub" target="_blank" rel="noopener">GitHub</a>.com/jonocatliff/SEO_brief.git</code></li>
+</ol></div>
+<h2 class="chapter" id="ch-260">Build the Website (v1)</h2>
+<div class="section-body"><ol>
+<li>Open your project folder in <a class="ext-link" href="https://code.visualstudio.com/" title="VS Code" target="_blank" rel="noopener">VS Code</a> → open Claude Code.</li>
+<li>Attach a <strong><a class="ext-link" href="https://dribbble.com" title="Dribbble" target="_blank" rel="noopener">Dribbble</a></strong> screenshot as design reference (search e.g. "plumbing website" on <a class="ext-link" href="https://dribbble.com" title="Dribbble" target="_blank" rel="noopener">Dribbble</a>.com → screenshot a landing page).</li>
+<li>In Claude, click <strong>+</strong> → upload screenshot from computer.</li>
+<li>Run prompt (see <strong><a class="doc-link" href="prompts.md" title="Prompts">prompts.md</a></strong> v1): homepage + blog index + service index.</li>
+<li>Preview at <code>localhost</code> (click the link Claude outputs after build).</li>
+</ol>
+<p><strong>Index pages:</strong> Blog index lists all posts; service index lists all service landing pages.</p></div>
+<h2 class="chapter" id="ch-486">Static Site Generation (Required)</h2>
+<div class="section-body"><p>Google must receive <strong>fully rendered HTML instantly</strong> when crawling. Use <strong><a class="doc-link" href="slideshow/rendering-pizza.html" title="SSG">static site generation</a> (<a class="doc-link" href="slideshow/rendering-pizza.html" title="SSG">SSG</a>)</strong> only.</p>
+<table>
+<tr><th>Type</th><th>What happens</th><th>SEO</th></tr>
+<tr><td><strong><a class="doc-link" href="slideshow/rendering-pizza.html" title="SSG">SSG</a></strong></td><td>Page pre-built at build time — Google gets HTML immediately</td><td>✅ Required</td></tr>
+<tr><td>Server-side rendering</td><td>Page built on each request — slower crawl</td><td>⚠️ Suboptimal</td></tr>
+<tr><td>Client-side rendering</td><td>Google may get empty shell — JS builds page in browser</td><td>❌ Won't rank</td></tr>
+</table>
+<p><strong><a class="doc-link" href="CLAUDE.md" title="Official CLAUDE.md">CLAUDE.md</a></strong> enforces Next.js <code>output: 'export'</code> (<a class="doc-link" href="slideshow/rendering-pizza.html" title="SSG">SSG</a>). If Google can't crawl complete HTML, nothing else matters.</p></div>
+<h2 class="chapter" id="ch-606">Keyword Research — SEMrush (Blog Keywords)</h2>
+<div class="section-body"><ol>
+<li>Open <strong><a class="ext-link" href="https://semrush.sjv.io/c/3446994/3367878/13053" title="SEMrush" target="_blank" rel="noopener">SEMrush</a></strong> → <strong>SEO</strong> → <strong>Keyword Magic Tool</strong>.</li>
+<li>Enter a <strong>root keyword</strong> (e.g. "plumber") — returns all variations containing that word.</li>
+<li>Apply filters:
+  <ul>
+    <li><strong>Keyword Difficulty ≤ 30</strong> — you can actually rank</li>
+    <li><strong>Volume ≥ 100/month</strong> — worth targeting</li>
+    <li><strong>Intent: Informational</strong> — for blog posts (not "buy Nike shoes" commercial intent)</li>
+  </ul>
+</li>
+<li><strong>Exclude bad keywords:</strong> competitor business names, branded terms, "how to become a [job]" (job-seekers not customers).</li>
+<li><strong>Questions tab:</strong> great blog ideas (e.g. "how much does a plumber cost?" = buyer intent).</li>
+<li><strong>Adjacent topics:</strong> top-of-funnel content before they're ready to hire (e.g. "signs you need a new water heater").</li>
+<li><strong>Competitor spy:</strong> enter competitor domain in <a class="ext-link" href="https://semrush.sjv.io/c/3446994/3367878/13053" title="SEMrush" target="_blank" rel="noopener">SEMrush</a> → see their ranking keywords → steal relevant ones.</li>
+<li>Select winners → <strong>Apply</strong> → add to keyword list (e.g. "plumbing keywords").</li>
+<li><strong>Export as CSV</strong> → save as <strong><a class="doc-link" href="keywords.csv" title="Blog keywords">keywords.csv</a></strong> in project folder.</li>
+<li>Target: a few hundred to a couple thousand keywords.</li>
+</ol>
+<p><strong>Don't ask Claude for keywords</strong> — it doesn't know difficulty or volume.</p></div>
+<h2 class="chapter" id="ch-1080">Create Blog Post (v2) + Pexels Images</h2>
+<div class="section-body"><ol>
+<li>Drag <strong><a class="doc-link" href="keywords.csv" title="Blog keywords">keywords.csv</a></strong> into your Claude Code project.</li>
+<li>Run prompt v2 (see <strong><a class="doc-link" href="prompts.md" title="Prompts">prompts.md</a></strong>): pick one primary keyword + 4–5 secondary keywords for a <strong><a class="doc-link" href="slideshow/blog-clusters.html" title="Keyword clusters">keyword clusters</a></strong>.</li>
+<li>After using a primary keyword, add it to <strong><a class="doc-link" href="references/used-keywords.md" title="Used keywords">used-keywords.md</a></strong> — never reuse.</li>
+<li><strong><a class="ext-link" href="https://www.pexels.com/api/" title="Pexels API" target="_blank" rel="noopener">Pexels</a> API setup:</strong>
+  <ul>
+    <li>Go to <a class="ext-link" href="https://www.pexels.com/api/" title="Pexels API" target="_blank" rel="noopener">Pexels</a>.com/api → create account → request API key</li>
+    <li>Add to <strong>.env</strong>: <code>PEXEL_API=your_key_here</code></li>
+  </ul>
+</li>
+<li>Prompt asks Claude to pull images from <a class="ext-link" href="https://www.pexels.com/api/" title="Pexels API" target="_blank" rel="noopener">Pexels</a> via API key in .env.</li>
+</ol>
+<p><strong><a class="doc-link" href="slideshow/blog-clusters.html" title="Keyword clusters">keyword clusters</a>:</strong> One page ranks for many related terms. Root: "how to unclog a drain" + secondaries: "unclog kitchen sink", "slow drain", "home remedy clogged drain", etc. One post can rank for 50–100 keywords.</p></div>
+<h2 class="chapter" id="ch-1338">Fix AI Slop — Voice Files (v3 prep)</h2>
+<div class="section-body"><p>First draft will read like generic AI. Fix with reference files in the <strong>references/</strong> folder:</p>
+<ul>
+<li><strong><a class="doc-link" href="references/voice.md" title="Voice reference">voice.md</a></strong> — your writing style, sentence rhythm, anti-patterns</li>
+<li><strong><a class="doc-link" href="references/humour.md" title="Humor reference">humour.md</a></strong> — humor rules (first 50 words need a dad joke or self-aware wink; not a brochure)</li>
+<li><strong><a class="doc-link" href="references/stats.md" title="Stats reference">stats.md</a></strong> — real business numbers (jobs completed, years in business, pricing)</li>
+<li><strong><a class="doc-link" href="references/stories.md" title="Stories reference">stories.md</a></strong> — anecdotes from past jobs</li>
+<li><strong><a class="doc-link" href="references/opinions.md" title="Opinions reference">opinions.md</a></strong> — your takes on the industry</li>
+</ul>
+<p><strong>How to populate:</strong> Copy your LinkedIn posts, emails, call transcripts, or writing you admire → prompt Claude: "Please update all reference files from these passages."</p>
+<p><strong>Why it matters for SEO:</strong> Dwell time, bounce rate, and engagement signals. Boring content = people leave = you don't rank.</p></div>
+<h2 class="chapter" id="ch-1577">Rewrite Blog Post — SERP Analysis (v3)</h2>
+<div class="section-body"><p>Before rewriting, Claude must research what already ranks:</p>
+<ol>
+<li>Search Google for the <strong>primary keyword</strong></li>
+<li>Find <strong>top 3 ranking blog posts</strong> (exclude Reddit/UGC)</li>
+<li>Analyze and match:
+  <ul>
+    <li>Format (listicle, tutorial, guide, comparison)</li>
+    <li>Word count (within 20% of their average)</li>
+    <li>H2 count and image count</li>
+    <li>Every topic all three cover + 1–2 extras they missed</li>
+    <li>Answer the main question in the first paragraph (featured snippet)</li>
+    <li>FAQ from "People Also Ask" (4–8 questions)</li>
+  </ul>
+</li>
+<li>Rewrite using <strong><a class="doc-link" href="references/humour.md" title="Humor reference">humour.md</a> + <a class="doc-link" href="references/voice.md" title="Voice reference">voice.md</a> + <a class="doc-link" href="references/opinions.md" title="Opinions reference">opinions.md</a> + <a class="doc-link" href="references/stats.md" title="Stats reference">stats.md</a> + <a class="doc-link" href="references/stories.md" title="Stories reference">stories.md</a></strong></li>
+<li>Images above H2 headings via <a class="ext-link" href="https://www.pexels.com/api/" title="Pexels API" target="_blank" rel="noopener">Pexels</a></li>
+</ol>
+<p>Full prompt in <strong><a class="doc-link" href="prompts.md" title="Prompts">prompts.md</a></strong> v3.</p></div>
+<h2 class="chapter" id="ch-1732">SEO Black Box — How to Win</h2>
+<div class="section-body"><ul>
+<li>200+ rumored ranking signals — nobody knows exact weights (not even Google employees).</li>
+<li>Known signals: dwell time, bounce rate, scroll depth, CTR, content depth, backlinks, technical health.</li>
+<li><strong>Simple rule:</strong> Google wants users to return → serves ads → makes money. Best content wins.</li>
+<li><strong>#1 lever:</strong> Create content people actually want to read (not AI slop).</li>
+</ul></div>
+<h2 class="chapter" id="ch-1874">Service Pages — Zipper Model</h2>
+<div class="section-body"><p><strong>Blog posts</strong> = topical authority (informational). <strong><a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">Service pages</a></strong> = money keywords (commercial intent).</p>
+<p><strong>Zipper model:</strong> Cross-multiply services × cities:</p>
+<pre>Services: emergency plumber, drain cleaning, hot water repair
+Cities: Vancouver, Toronto, Montreal
+→ emergency plumber Vancouver, drain cleaning Toronto, etc.</pre>
+<p><strong><a class="ext-link" href="https://semrush.sjv.io/c/3446994/3367878/13053" title="SEMrush" target="_blank" rel="noopener">SEMrush</a> for service keywords:</strong></p>
+<ol>
+<li>Keyword Magic Tool → root keyword → sort by <strong>Cost Per Click</strong> (money keywords; typically $3–$20 CPC)</li>
+<li>Look for pattern: <em>service + city</em> or <em>city + service</em></li>
+<li>Export to list → <strong>Service-<a class="doc-link" href="keywords.csv" title="Blog keywords">keywords.csv</a></strong></li>
+</ol>
+<p><strong>Build (<a class="doc-link" href="prompts.md" title="Prompts">prompts.md</a> v4):</strong> Landing page for city/service — same layout as your tested homepage (Jono got 20% conversion via Google Ads A/B testing).</p>
+<p><strong>Limit:</strong> Don't create hundreds — similar content across many pages can hurt. Be tasteful (not thousands).</p>
+<p>Blog posts raise domain authority → <a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">service pages</a> rank higher.</p></div>
+<h2 class="chapter" id="ch-2419">On-Page SEO (v5) — 80+ Signals</h2>
+<div class="section-body"><p>Paste the full checklist from <strong><a class="doc-link" href="on-page-seo.md" title="On-page SEO checklist">on-page-seo.md</a></strong> (or <strong><a class="doc-link" href="slideshow/onpage-seo-checklist.html" title="Visual checklist">slideshow/onpage-seo-checklist.html</a></strong>) into Claude Code.</p>
+<p><strong>Prompt v5:</strong> Update blog post with every item from <strong><a class="doc-link" href="on-page-seo.md" title="On-page SEO checklist">on-page-seo.md</a></strong> — but keep voice and humor. Balance SEO markers with readable content.</p>
+<p><strong>Key items verified in demo:</strong></p>
+<ul>
+<li>2–3 external links to authoritative sources</li>
+<li>3–5 internal links to your other pages (descriptive anchor text)</li>
+<li>Primary keyword in first 100 words</li>
+<li>Exactly one H1; proper H2 → H3 hierarchy</li>
+<li>4–8 FAQ questions</li>
+<li>Meta title (blue in Google results) + meta description (gray text)</li>
+<li>80+ total signals in full checklist (schema, OG tags, alt text, E-E-A-T, etc.)</li>
+</ul>
+<p><strong>Check meta tags:</strong> Chrome → three dots → More tools → Developer tools → Elements → search "og:"</p>
+<p>Apply to <strong>every</strong> blog post and <a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">service page</a>.</p></div>
+<h2 class="chapter" id="ch-2752">Technical SEO (v6) — Lighthouse 100/100</h2>
+<div class="section-body"><p><strong>Three requirements:</strong></p>
+<ol>
+<li><strong><a class="doc-link" href="app/sitemap.ts" title="Sitemap">sitemap.xml</a></strong> — tells Google every page that exists (submit to Search Console later)</li>
+<li><strong><a class="doc-link" href="app/robots.ts" title="Robots">robots.txt</a></strong> — tells Google what to crawl. Allow all public pages; disallow /admin, /dashboard</li>
+<li><strong>Google <a class="doc-link" href="slideshow/technical-seo.html" title="Lighthouse">Lighthouse</a></strong> — score 100 on Performance, Accessibility, Best Practices, SEO</li>
+</ol>
+<p><strong>Run <a class="doc-link" href="slideshow/technical-seo.html" title="Lighthouse">Lighthouse</a>:</strong> Chrome → three dots → More tools → Developer tools → click <strong>&gt;&gt;</strong> arrows → <strong><a class="doc-link" href="slideshow/technical-seo.html" title="Lighthouse">Lighthouse</a></strong> tab → Analyze page load.</p>
+<p><strong>Fix via Claude (<a class="doc-link" href="prompts.md" title="Prompts">prompts.md</a> v6):</strong> Copy entire <a class="doc-link" href="slideshow/technical-seo.html" title="Lighthouse">Lighthouse</a> report → paste in Claude → ask to optimize to 100% on all four categories + generate <a class="doc-link" href="app/robots.ts" title="Robots">robots.txt</a> and <a class="doc-link" href="app/sitemap.ts" title="Sitemap">sitemap.xml</a>.</p>
+<p>If not 100%, paste remaining issues back and iterate.</p>
+<p>Example before fix: Performance 53, SEO 92. After: 100/100/100/96.</p></div>
+<h2 class="chapter" id="ch-3062">Automate with Claude Code Skills</h2>
+<div class="section-body"><p>Package the full workflow into reusable skills so you type one word and Claude runs everything.</p>
+<p><strong>Blog skill</strong> (<strong><a class="doc-link" href=".claude/skills/blog/SKILL.md" title="Blog skill">blog skill</a></strong>) should:</p>
+<ol>
+<li>Grab unused keyword from <a class="doc-link" href="keywords.csv" title="Blog keywords">keywords.csv</a> (check <a class="doc-link" href="references/used-keywords.md" title="Used keywords">used-keywords.md</a>)</li>
+<li>Create <a class="doc-link" href="slideshow/blog-clusters.html" title="Keyword clusters">keyword clusters</a></li>
+<li>SERP research (top 3 competitors)</li>
+<li>Write with voice/humor references</li>
+<li>Pull <a class="ext-link" href="https://www.pexels.com/api/" title="Pexels API" target="_blank" rel="noopener">Pexels</a> images</li>
+<li>Apply every item from <strong><a class="doc-link" href="on-page-seo.md" title="On-page SEO checklist">on-page-seo.md</a></strong></li>
+<li>Reuse same optimized page template</li>
+</ol>
+<p>Create similar <strong>service skill</strong> for <a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">service pages</a>. Refresh chat after creating skill, then type <code>blog</code> or <code>service</code>.</p>
+<p><strong>Publishing cadence — don't spike volume:</strong></p>
+<ul>
+<li>Day 1: 1 post · Day 2: 1 · Day 3: 2 · Day 5: 3 · Day 8: 4</li>
+<li>Never dump 1,000 posts at once — Google flags volume spikes</li>
+</ul></div>
+<h2 class="chapter" id="ch-3276">Off-Page SEO — What to Avoid &amp; 4 Legit Methods</h2>
+<div class="section-body"><p><strong>Jono does not rely on <a class="doc-link" href="slideshow/off-page-seo.html" title="Off-page SEO">off-page SEO</a>.</strong> Cheap backlink services often destroy sites (PBNs = Private Blog Networks = link farms Google detects immediately).</p>
+<p><strong>4 legit methods (optional):</strong></p>
+<ol>
+<li><strong>Broken backlink swapping:</strong> <a class="ext-link" href="https://semrush.sjv.io/c/3446994/3367878/13053" title="SEMrush" target="_blank" rel="noopener">SEMrush</a> → site audit competitor → find their broken external links → offer your page as replacement</li>
+<li><strong>Guest posting:</strong> Google search <code>"plumbing" "write for us"</code> → write for them, link back to your site</li>
+<li><strong>HARO / journalist queries:</strong> Answer expert questions → get backlink when published</li>
+<li><strong>Paid quality backlinks:</strong> Reputable domains only (expensive, pay-to-play on some publications)</li>
+</ol>
+<p><strong>Best strategy:</strong> Find winning keywords via <a class="ext-link" href="https://semrush.sjv.io/c/3446994/3367878/13053" title="SEMrush" target="_blank" rel="noopener">SEMrush</a> and rank with content — off-page not required.</p></div>
+<h2 class="chapter" id="ch-3671">Deploy: GitHub + Vercel</h2>
+<div class="section-body"><ol>
+<li><strong><a class="ext-link" href="https://github.com/jonocatliff/SEO_brief" title="GitHub" target="_blank" rel="noopener">GitHub</a>:</strong> Create new private repo → copy the git commands <a class="ext-link" href="https://github.com/jonocatliff/SEO_brief" title="GitHub" target="_blank" rel="noopener">GitHub</a> shows → in Claude Code: "Please upload my whole project here" + paste repo URL</li>
+<li><strong><a class="ext-link" href="https://vercel.com" title="Vercel" target="_blank" rel="noopener">Vercel</a>:</strong> Create free account → connect <a class="ext-link" href="https://github.com/jonocatliff/SEO_brief" title="GitHub" target="_blank" rel="noopener">GitHub</a> → Import project → <strong>Preset: Next.js</strong> → Deploy (~60 seconds)</li>
+<li>Optional: add custom domain via <a class="ext-link" href="https://vercel.com" title="Vercel" target="_blank" rel="noopener">Vercel</a> domain tab (or import from Namecheap)</li>
+</ol>
+<p>Localhost = only you can see it. After deploy, site is public.</p></div>
+<h2 class="chapter" id="ch-3804">Post-Launch: Google Business + Search Console</h2>
+<div class="section-body"><ol>
+<li><strong><a class="ext-link" href="https://business.google.com" target="_blank" rel="noopener">Google Business Profile</a></strong> (<a class="ext-link" href="https://business.google.com" target="_blank" rel="noopener">Google Business Profile</a>) — free local listing; shows in map pack for "Toronto plumber" type searches</li>
+<li><strong><a class="ext-link" href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a>:</strong>
+  <ul>
+    <li>Add property → URL prefix → paste your <a class="ext-link" href="https://vercel.com" title="Vercel" target="_blank" rel="noopener">Vercel</a> URL (copy full link address)</li>
+    <li>Verify ownership: HTML meta tag method → copy tag → Claude: "Add this meta tag for Search Console verification and redeploy to <a class="ext-link" href="https://github.com/jonocatliff/SEO_brief" title="GitHub" target="_blank" rel="noopener">GitHub</a> + <a class="ext-link" href="https://vercel.com" title="Vercel" target="_blank" rel="noopener">Vercel</a>"</li>
+    <li>Submit sitemap: enter <code><a class="doc-link" href="app/sitemap.ts" title="Sitemap">sitemap.xml</a></code> in Sitemaps section</li>
+    <li><strong>Request indexing:</strong> paste a new page URL in top search bar → request indexing (~10 requests/day; can index within 1 day vs weeks)</li>
+  </ul>
+</li>
+<li><strong>Google Analytics</strong> — track visitor behavior</li>
+<li><strong>Landing page testing</strong> — A/B test forms/layouts (Google Ads), apply winner to all <a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">service pages</a></li>
+</ol>
+<p>Don't dump 1,000 pages on launch day.</p></div>
+<footer>Condensed from YouTube transcript · Blueprint: <a href="https://github.com/jonocatliff/SEO_brief">github.com/jonocatliff/SEO_brief</a></footer>
+</main></div></body></html>
