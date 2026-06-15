@@ -74,7 +74,7 @@ footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);fon
 <li><a href="CLAUDE.md">CLAUDE.md</a></li><li><a href="on-page-seo.md">on-page-seo.md</a></li>
 <li><a href="prompts.md">prompts.md</a></li><li><a href="references/humour.md">humour.md</a></li>
 <li><a href="keywords.csv">keywords.csv</a></li><li><a href="Service-keywords.csv">Service-keywords.csv</a></li>
-<li><a href=".claude/skills/blog/SKILL.md">blog skill</a></li><li><a href="slideshow/index.html">slideshow</a></li>
+<li><a href="skills/claude-code-seo-blog/SKILL.md">blog skill</a></li><li><a href="skills/claude-code-seo/SKILL.md">main skill</a></li><li><a href="slideshow/index.html">slideshow</a></li>
 <li><a href="transcript-full.html">Full raw transcript</a></li>
 </ul></div></aside><main>
 <p class="eyebrow">Jono Catliff · Automatable</p>
@@ -84,7 +84,7 @@ footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);fon
 <a class="pill primary" href="https://youtu.be/4IyJm1i__ag" target="_blank" rel="noopener">Watch on YouTube</a>
 <a class="pill" href="prompts.md">Prompts</a><a class="pill" href="on-page-seo.md">SEO Checklist</a>
 <a class="pill" href="transcript-full.html">Full transcript</a><span class="pill">16 sections</span></div>
-<div class="notice"><strong>Condensed from ~12,800 words → ~2,400 words.</strong> Keeps all actionable SEO steps, SEMrush clicks, Lighthouse workflow, deployment, and prompt references. Links point to official blueprint files.</div>
+<div class="notice"><strong>Condensed from ~12,800 words → ~2,400 words.</strong> Keeps all actionable SEO steps, SEMrush clicks, Lighthouse workflow, deployment, and prompt references. Links point to official blueprint files.<br><br><strong>Install as an agent skill:</strong> <code>npx skills add liyakhar/claude-code-seo-guide -y</code> · <a href="https://github.com/liyakhar/claude-code-seo-guide">Star on GitHub</a></div>
 <h2 class="chapter" id="ch-0">Overview &amp; Strategy</h2>
 <div class="section-body"><ul>
 <li><strong>Goal:</strong> Rank on Google via two tactics — <em>blog posts at scale</em> (informational keywords) + <em><a class="doc-link" href="slideshow/service-vs-blog.html" title="Service pages">service pages</a></em> (money keywords: service × city).</li>
@@ -234,7 +234,7 @@ Cities: Vancouver, Toronto, Montreal
 <p>Example before fix: Performance 53, SEO 92. After: 100/100/100/96.</p></div>
 <h2 class="chapter" id="ch-3062">Automate with Claude Code Skills</h2>
 <div class="section-body"><p>Package the full workflow into reusable skills so you type one word and Claude runs everything.</p>
-<p><strong>Blog skill</strong> (<strong><a class="doc-link" href=".claude/skills/blog/SKILL.md" title="Blog skill">blog skill</a></strong>) should:</p>
+<p><strong><a class="doc-link" href="skills/claude-code-seo-blog/SKILL.md" title="Blog skill">blog skill</a></strong> (<strong>skills/claude-code-seo-blog/SKILL.md</strong>) should:</p>
 <ol>
 <li>Grab unused keyword from <a class="doc-link" href="keywords.csv" title="Blog keywords">keywords.csv</a> (check <a class="doc-link" href="references/used-keywords.md" title="Used keywords">used-keywords.md</a>)</li>
 <li>Create <a class="doc-link" href="slideshow/blog-clusters.html" title="Keyword clusters">keyword clusters</a></li>
