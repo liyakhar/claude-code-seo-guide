@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://claude-code-seo-guide.vercel.app/</loc>
+    <loc>https://liyakhar.github.io/claude-code-seo-guide/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://claude-code-seo-guide.vercel.app/transcript-full.html</loc>
+    <loc>https://liyakhar.github.io/claude-code-seo-guide/transcript-full.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://claude-code-seo-guide.vercel.app/slideshow/index.html</loc>
+    <loc>https://liyakhar.github.io/claude-code-seo-guide/slideshow/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
