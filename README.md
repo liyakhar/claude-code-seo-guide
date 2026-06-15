@@ -1,68 +1,98 @@
-# SEO — live demo site
+# Claude Code SEO Skill
 
-Six pages in one Next.js project, each showing a stage of the SEO workflow for a fictional Melbourne plumber (Plumbing Co) plus a California landing page. Every page is statically pre-rendered — view-source on any route shows finished HTML.
+[![GitHub stars](https://img.shields.io/github/stars/liyakhar/claude-code-seo-guide?style=social)](https://github.com/liyakhar/claude-code-seo-guide/stargazers)
+[![Live guide](https://img.shields.io/badge/guide-live-brightgreen)](https://liyakhar.github.io/claude-code-seo-guide/)
 
-## The six versions
+Agent skill for [Jono Catliff's Claude Code SEO blueprint](https://www.youtube.com/watch?v=4IyJm1i__ag) — programmatic SEO with blog posts at scale, city×service landing pages, on-page checklist, technical SEO, and deploy.
 
-| Route | Stage | What's demonstrated |
-|-------|-------|---------------------|
-| `/v1` | Scaffolded site | Claude Code builds the homepage from a prompt |
-| `/v2` | AI blog slop | Generic AI blog post with no voice files |
-| `/v3` | Voice-injected | Same post rewritten using `references/voice.md + humour.md + stats.md + stories.md + opinions.md` |
-| `/v4` | Landing page | City+service landing page (`plumber baldwin park ca`), homepage silhouette, local NAP schema |
-| `/v5` | On-page SEO | v3's post run through the 15-category, 80+ item on-page SEO checklist |
-| `/v6` | Technical SEO | v5 + sitemap, robots, OG images, Organization schema, favicon |
+**If this helps you rank, star the repo** — it helps others find it on [skills.sh](https://skills.sh) and GitHub.
 
-## Stack
+## Install
 
-- **Next.js 15 (App Router)** with `output: 'export'` — full SSG, no runtime server
-- **TypeScript**
-- **Tailwind CSS**
-- **Pexels API** for build-time images (hero + one per H2 section, with attribution)
-- **Vercel** for hosting
+One command (Cursor, Claude Code, Codex, and other agents):
 
-## Local dev
+```bash
+npx skills add liyakhar/claude-code-seo-guide -y
+```
+
+Install a specific skill:
+
+```bash
+# Full workflow
+npx skills add liyakhar/claude-code-seo-guide --skill claude-code-seo -y
+
+# Blog post generator only
+npx skills add liyakhar/claude-code-seo-guide --skill claude-code-seo-blog -y
+
+# Service landing page generator only
+npx skills add liyakhar/claude-code-seo-guide --skill claude-code-seo-service -y
+```
+
+Global install (all your projects):
+
+```bash
+npx skills add liyakhar/claude-code-seo-guide -g -y
+```
+
+## Use
+
+1. Clone this repo as your project (or copy blueprint files into an existing Next.js app):
+
+   ```bash
+   git clone https://github.com/liyakhar/claude-code-seo-guide.git my-seo-site
+   cd my-seo-site
+   ```
+
+2. In Cursor or Claude Code, invoke the skill:
+
+   - Type `/claude-code-seo` or ask: *"Run the Claude Code SEO workflow"*
+   - For a single blog post: `/claude-code-seo-blog` or *"Create a new SEO blog post"*
+   - For a service page: `/claude-code-seo-service` or *"Create a service landing page"*
+
+3. Follow the agent through setup → keywords → content → on-page → technical → deploy.
+
+## What's included
+
+| Skill | What it does |
+|-------|----------------|
+| `claude-code-seo` | Full workflow: setup, SEMrush, blog, service pages, on-page, technical SEO, deploy |
+| `claude-code-seo-blog` | End-to-end blog post from `keywords.csv` with voice + SERP analysis |
+| `claude-code-seo-service` | City+service landing page from `Service-keywords.csv` |
+
+## Blueprint files (in this repo)
+
+- `CLAUDE.md` — project rules (SSG, voice, design)
+- `on-page-seo.md` — 80+ item checklist
+- `prompts.md` — copy-paste prompts v1–v8
+- `keywords.csv` / `Service-keywords.csv` — keyword research
+- `references/` — voice, humour, stats, stories, opinions
+- `slideshow/` — visual SEO guides
+- Demo Next.js app (v1–v6 progression pages)
+
+## Live guide
+
+Condensed action guide with timestamp links and blueprint file references:
+
+**https://liyakhar.github.io/claude-code-seo-guide/**
+
+## Credits
+
+- Workflow and blueprint: [Jono Catliff / Automatable](https://github.com/jonocatliff/SEO_brief)
+- Skill packaging and guide: [liyakhar/claude-code-seo-guide](https://github.com/liyakhar/claude-code-seo-guide)
+
+## Local dev (demo app)
 
 ```bash
 npm install
-npm run dev     # http://localhost:3000
-npm run build   # static export to out/
+npm run dev
 ```
 
-## Pexels images
-
-Set `PEXEL_API` in `.env` and run:
+Static export:
 
 ```bash
-node scripts/fetch-pexels.mjs
+npm run build
 ```
 
-This downloads a hero + one image per H2 heading for every blog post, saves them to `/public/images/blog/<post>/<section>.jpg`, and writes photographer attribution to `/content/pexels.json`.
+## License
 
-## References folder
-
-The voice layer lives in `/references/`:
-
-- `voice.md` — Marco's writing style
-- `humour.md` — dad-joke frequency, anti-patterns, examples
-- `stats.md` — canonical real numbers (pricing, review counts, response times)
-- `stories.md` — recurring anecdotes
-- `opinions.md` — industry opinions backed by numbers
-- `used-keywords.md` — tracker so primary keywords aren't reused
-
-Every content-generation task reads these files first. See `CLAUDE.md` at the root for the full instructions.
-
-## Keyword research
-
-- `Plumbing-Keywords_list_2026-04-20 (1).csv` — blog post keyword research (used for v2 / v3 / v5 / v6)
-- `Service-Keywords.csv` — city+service keyword research (used for v4)
-
-## SEO reference files
-
-- `on-page-seo.md` — 80+ item on-page SEO checklist applied to v5
-- `slideshow/onpage-seo-checklist.html` — visual reference for the checklist
-- `slideshow/technical-seo.html` — visual reference for technical SEO
-
----
-
-Built with [Claude Code](https://claude.com/claude-code).
+Blueprint content © Jono Catliff. Skill packaging and guide site © contributors. Use and adapt for your own SEO projects.

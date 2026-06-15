@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Workflow",
+      "description": "Full Claude Code SEO pipeline from setup to deploy.",
+      "skills": ["claude-code-seo"]
+    },
+    {
+      "title": "Content",
+      "description": "Generate blog posts and service landing pages at scale.",
+      "skills": ["claude-code-seo-blog", "claude-code-seo-service"]
+    }
+  ]
+}
